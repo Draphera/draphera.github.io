@@ -252,6 +252,10 @@ body.light-mode .brand-logo-light {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.04);
   color: var(--gold);
+  display: inline-grid;
+  place-items: center;
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 .language-switch {
@@ -447,7 +451,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(3.25rem, 8vw, 7.4rem);
+  font-size: clamp(2.8rem, 5.8vw, 5.7rem);
   font-weight: 800;
 }
 
@@ -1036,7 +1040,7 @@ body.light-mode .footer-logo {
   }
 
   h1 {
-    font-size: clamp(2.6rem, 14vw, 4.5rem);
+    font-size: clamp(2.25rem, 11vw, 3.65rem);
   }
 
   h2 {

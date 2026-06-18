@@ -13,10 +13,6 @@ const translations = {
     "brand.claim": "Nato dai Drappeggi. Costruito per il Futuro.",
     "brand.note": "Draphera e un ecosistema indipendente per tecnologie vettoriali, modellistica tecnica e infrastrutture digitali.",
     "brand.rights": "Tutti i diritti riservati.",
-    "badge.ai": "Intelligenza Artificiale",
-    "badge.vector": "Dati Vettoriali",
-    "badge.identity": "Identita Digitale",
-    "badge.invite": "Solo su invito",
     "home.heroEyebrow": "Draphera Ecosystem",
     "home.heroTitle": "Nato dai Drappeggi.<br>Costruito per il Futuro.",
     "home.heroLead": "Draphera costruisce l'infrastruttura digitale per la modellistica tecnica, i dati vettoriali e le tecnologie industriali della moda.",
@@ -69,10 +65,6 @@ const translations = {
     "brand.claim": "Born from Draping. Built for the Future.",
     "brand.note": "Draphera is an independent ecosystem for vector technologies, technical patternmaking and digital infrastructure.",
     "brand.rights": "All rights reserved.",
-    "badge.ai": "Artificial Intelligence",
-    "badge.vector": "Vector Data",
-    "badge.identity": "Digital Identity",
-    "badge.invite": "Invitation only",
     "home.heroEyebrow": "Draphera Ecosystem",
     "home.heroTitle": "Born from Draping.<br>Built for the Future.",
     "home.heroLead": "Draphera builds digital infrastructure for technical patternmaking, vector data and industrial fashion technologies.",
@@ -125,10 +117,6 @@ const translations = {
     "brand.claim": "Nacido del drapeado. Construido para el futuro.",
     "brand.note": "Draphera es un ecosistema independiente para tecnologias vectoriales, patronaje tecnico e infraestructuras digitales.",
     "brand.rights": "Todos los derechos reservados.",
-    "badge.ai": "Inteligencia Artificial",
-    "badge.vector": "Datos Vectoriales",
-    "badge.identity": "Identidad Digital",
-    "badge.invite": "Solo por invitacion",
     "home.heroEyebrow": "Ecosistema Draphera",
     "home.heroTitle": "Nacido del drapeado.<br>Construido para el futuro.",
     "home.heroLead": "Draphera construye infraestructura digital para patronaje tecnico, datos vectoriales y tecnologias industriales de moda.",
@@ -181,10 +169,6 @@ const translations = {
     "brand.claim": "Ne du drape. Construit pour le futur.",
     "brand.note": "Draphera est un ecosysteme independant pour technologies vectorielles, modelisme technique et infrastructures digitales.",
     "brand.rights": "Tous droits reserves.",
-    "badge.ai": "Intelligence Artificielle",
-    "badge.vector": "Donnees Vectorielles",
-    "badge.identity": "Identite Digitale",
-    "badge.invite": "Sur invitation",
     "home.heroEyebrow": "Ecosysteme Draphera",
     "home.heroTitle": "Ne du drape.<br>Construit pour le futur.",
     "home.heroLead": "Draphera construit l'infrastructure digitale pour le modelisme technique, les donnees vectorielles et les technologies industrielles de la mode.",
@@ -237,10 +221,6 @@ const translations = {
     "brand.claim": "Aus Drapierung geboren. Fur die Zukunft gebaut.",
     "brand.note": "Draphera ist ein unabhangiges Okosystem fur Vektortechnologien, technische Schnittkonstruktion und digitale Infrastrukturen.",
     "brand.rights": "Alle Rechte vorbehalten.",
-    "badge.ai": "Kunstliche Intelligenz",
-    "badge.vector": "Vektordaten",
-    "badge.identity": "Digitale Identitat",
-    "badge.invite": "Nur auf Einladung",
     "home.heroEyebrow": "Draphera Okosystem",
     "home.heroTitle": "Aus Drapierung geboren.<br>Fur die Zukunft gebaut.",
     "home.heroLead": "Draphera baut digitale Infrastruktur fur technische Schnittkonstruktion, Vektordaten und industrielle Modetechnologien.",
@@ -324,6 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector("[data-menu]");
   const menuToggle = document.querySelector("[data-menu-toggle]");
   const themeToggle = document.querySelector("[data-theme-toggle]");
+  const themeIcon = document.querySelector("[data-theme-icon]");
   const form = document.querySelector("[data-static-form]");
   const formStatus = document.querySelector("[data-form-status]");
   const yearTargets = document.querySelectorAll("[data-year]");
@@ -405,6 +386,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const applyTheme = (theme) => {
     const isLight = theme === "light";
     document.body.classList.toggle("light-mode", isLight);
+    if (themeIcon) {
+      themeIcon.textContent = isLight ? "☀" : "☾";
+    }
     localStorage.setItem("draphera-theme", theme);
   };
 
