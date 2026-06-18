@@ -2,7 +2,7 @@
 
 Sito statico ufficiale dell'ecosistema Draphera.
 
-Draphera.com comunica l'identità istituzionale del progetto: un ecosistema indipendente dedicato a modellistica tecnica, dati vettoriali, interoperabilità, preservazione della conoscenza industriale e infrastrutture digitali. VISION è l'infrastruttura tecnica collegata che alimenta la ricerca e lo sviluppo.
+Draphera.com comunica l'identità istituzionale del progetto: un ecosistema indipendente dedicato a modellistica tecnica, dati vettoriali, interoperabilità, preservazione della conoscenza industriale e infrastrutture digitali. VISION è l'infrastruttura tecnica collegata che alimenta ricerca e sviluppo.
 
 ## URL
 
@@ -42,7 +42,7 @@ Draphera.com comunica l'identità istituzionale del progetto: un ecosistema indi
 
 ## Architettura narrativa
 
-- `index.html`: portale principale, manifesto sintetico, relazione Draphera/VISION, ricerca, standard studiati, iniziative future e accesso privato.
+- `index.html`: portale principale, relazione Draphera/VISION, ricerca, standard studiati, manifesto sintetico, iniziative future e accesso privato.
 - `ecosystem.html`: mappa dell'ecosistema Draphera.
 - `vision.html`: descrizione dell'infrastruttura tecnica VISION e collegamento all'Observatory.
 - `founder.html`: origine industriale e tecnologica del progetto.
@@ -88,17 +88,18 @@ Il repository pubblica da `main` nella root.
 
 ```powershell
 node --check assets\js\main.js
-git status --short
+git -c safe.directory=C:/xampp/htdocs/draphera.com status --short
 ```
 
 Verifiche manuali:
 
 - Home desktop/tablet/mobile senza overflow orizzontale.
-- Tema chiaro e scuro leggibili, soprattutto hero.
-- Menu mobile funzionante.
+- Tema chiaro e scuro leggibili, soprattutto hero e pagine secondarie.
+- Menu mobile funzionante da tastiera e touch.
 - Footer completo con Privacy e canali social.
 - Link VISION verso Observatory funzionante.
 - Contact form statico: nessun dato inviato finché non viene integrato un backend.
+- SEO base presente su ogni pagina: title, description, canonical, Open Graph.
 
 ## Lingue
 
