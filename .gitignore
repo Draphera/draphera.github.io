@@ -1,0 +1,8 @@
+log/
+i18n/
+pages/
+partials/
+*.php
+php-server*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="it" data-page="contact">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modulo contatti Draphera</title>
+  <meta name="description" content="Contatta Draphera per l'anteprima privata dedicata a modellistica tecnica, dati vettoriali, AI e infrastrutture digitali.">
+  <link rel="canonical" href="https://draphera.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Modulo contatti Draphera">
+  <meta property="og:description" content="Draphera e attualmente in anteprima privata con partner selezionati.">
+  <meta property="og:image" content="https://draphera.com/assets/img/bg.png">
+  <meta name="theme-color" content="#151018">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <script src="./assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="common.skip">Salta al contenuto</a>
+  <header class="site-header" data-header>
+    <nav class="nav-shell" aria-label="Navigazione principale">
+      <a class="brand-mark" href="./index.html" aria-label="Draphera home"><img class="brand-logo brand-logo-dark" src="./assets/img/logo-light.png" alt="Draphera"><img class="brand-logo brand-logo-light" src="./assets/img/logo-dark.png" alt="" aria-hidden="true"></a>
+      <button class="nav-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu"><span class="sr-only" data-i18n="common.openMenu">Apri menu</span><span></span><span></span><span></span></button>
+      <div class="site-menu" id="site-menu" data-menu><a href="./index.html#soluzioni" data-i18n="nav.solutions">Soluzioni</a><a href="./ecosystem.html" data-i18n="nav.ecosystem">Ecosistema</a><a href="./vision.html">VISION</a><a href="./manifesto.html" data-i18n="nav.manifesto">Manifesto</a><a href="./contact.html" aria-current="page" data-i18n="nav.contact">Contatti</a></div>
+      <div class="nav-actions"><button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambia tema">Tema</button><div class="language-switch" aria-label="Selettore lingua"><button type="button" data-lang-option="it" aria-current="true">IT</button><button type="button" data-lang-option="en">EN</button><button type="button" data-lang-option="es">ES</button><button type="button" data-lang-option="fr">FR</button><button type="button" data-lang-option="de">DE</button></div><a class="btn btn-primary nav-cta" href="./contact.html" data-i18n="cta.contact">Modulo contatti</a></div>
+    </nav>
+  </header>
+
+  <main id="main" class="page-main">
+    <section class="page-hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container narrow">
+        <p class="eyebrow" data-i18n="contact.eyebrow">Anteprima privata</p>
+        <h1 data-i18n="contact.title">Modulo contatti Draphera</h1>
+        <p data-i18n="contact.lead">Stiamo costruendo il primo nucleo dell'ecosistema con partner selezionati, creator tecnici, aziende e professionisti della modellistica.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <form class="access-form" action="#" method="post" data-static-form>
+          <!-- Integrare qui Formspree, Netlify Forms o un backend futuro quando la raccolta contatti sara attiva. -->
+          <div class="form-field">
+            <label for="name" data-i18n="form.name">Nome</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email" data-i18n="form.email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="role" data-i18n="form.role">Azienda / ruolo</label>
+            <input id="role" name="role" type="text" autocomplete="organization">
+          </div>
+          <div class="form-field">
+            <label for="interest" data-i18n="form.interest">Area di interesse</label>
+            <select id="interest" name="interest">
+              <option value="">Seleziona un'area</option>
+              <option>Modellistica tecnica</option>
+              <option>Dati vettoriali</option>
+              <option>AI Layer</option>
+              <option>VISION</option>
+              <option>Partnership</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="message" data-i18n="form.message">Messaggio</label>
+            <textarea id="message" name="message" rows="6"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit" data-i18n="cta.contact">Modulo contatti</button>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </form>
+        <aside class="surface-card contact-aside">
+          <p class="eyebrow">Nota</p>
+          <h2 data-i18n="contact.asideTitle">Accesso su invito</h2>
+          <p data-i18n="contact.asideText">Il form e statico e pronto per integrazione futura. Nessun dato viene inviato finche non sara collegato un servizio di raccolta o un backend dedicato.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><img class="footer-logo" src="./assets/img/logo-light.png" alt="Draphera"><p data-i18n="brand.claim">Nato dai Drappeggi. Costruito per il Futuro.</p></div>
+      <nav class="footer-links" aria-label="Navigazione footer"><a href="./manifesto.html" data-i18n="nav.manifesto">Manifesto</a><a href="./ecosystem.html" data-i18n="nav.ecosystem">Ecosistema</a><a href="./vision.html">VISION</a><a href="./contact.html" data-i18n="nav.contact">Contatti</a></nav>
+      <p class="footer-note" data-i18n="brand.note">Draphera e un ecosistema indipendente per tecnologie vettoriali, modellistica tecnica e infrastrutture digitali.</p>
+      <p class="copyright">(c) <span data-year></span> Draphera. <span data-i18n="brand.rights">Tutti i diritti riservati.</span></p>
+    </div>
+  </footer>
+</body>
+</html>

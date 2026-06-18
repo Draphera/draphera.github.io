@@ -1,0 +1,132 @@
+/* ==== CTA SECTION e BANNER - DARK MODE ==== */
+.cta-section {
+  position: relative;
+  z-index: 10;
+  max-width: 100vw;
+  padding: 6em 0 6em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    #1e1e1e 10%,
+    #1e1e1e 65%,
+    #8f53ff 130%
+  );
+}
+
+.cta-banner {
+  max-width: 580px;
+  margin: 3em auto 2.5em auto;
+  padding: 2.5em 2em 2em 2em;
+  border-radius: 2em;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #1e1e1e 10%, #232329 100%),
+    linear-gradient(120deg, rgba(224,198,99,0.14) 0%, rgba(255,255,255,0.04) 100%);
+  box-shadow:
+    0 10px 32px 0 rgba(112,58,214,0.09),
+    0 2px 24px 0 rgba(224,198,99,0.08);
+  border: 1.5px solid rgba(224,198,99,0.22);
+  backdrop-filter: blur(11px) saturate(1.1);
+  -webkit-backdrop-filter: blur(11px) saturate(1.1);
+}
+
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 37%;
+  border-radius: 2em 2em 48% 48% / 1.8em 1.8em 70% 70%;
+  background: linear-gradient(180deg,rgba(255,255,255,0.33) 18%,rgba(255,255,255,0.10) 90%,transparent 100%);
+  opacity: 0.26;
+  pointer-events: none;
+  z-index: 2;
+}
+.cta-banner::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  top: -18px;
+  width: 70%;
+  height: 22px;
+  background: linear-gradient(90deg,rgba(255,255,255,0.18) 30%,rgba(255,255,255,0.03) 70%);
+  border-radius: 60% 60% 70% 70%;
+  filter: blur(2.5px);
+  opacity: 0.16;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ==== LIGHT MODE OVERRIDE ==== */
+body.light-mode .cta-section {
+  background: linear-gradient(
+    180deg,
+    #fff 5%,
+    #fff 50%,
+    #fff8e5 100%
+  );
+}
+
+body.light-mode .cta-banner {
+  background:
+    linear-gradient(180deg, #fff8e5 10%, #fff 100%),
+    linear-gradient(120deg, rgba(224,198,99,0.10) 0%, rgba(224,198,99,0.03) 100%);
+  box-shadow:
+    0 10px 32px 0 rgba(224,198,99,0.09),
+    0 2px 24px 0 rgba(224,198,99,0.06);
+  border: 1.5px solid #e0c66355;
+  color: #232329;
+}
+
+body.light-mode .cta-banner::before {
+  background: linear-gradient(180deg,rgba(224,198,99,0.12) 15%,rgba(255,255,255,0.24) 80%,transparent 100%);
+  opacity: 0.17;
+}
+
+body.light-mode .cta-banner::after {
+  background: linear-gradient(90deg,rgba(224,198,99,0.15) 20%,rgba(255,255,255,0.08) 70%);
+  opacity: 0.13;
+}
+
+/* ==== TESTO LUXURY ==== */
+.cta-title {
+  font-size: 2em;
+  font-weight: 800;
+  color: var(--accent, #e0c663);
+  margin-bottom: 0.4em;
+  letter-spacing: -0.5px;
+  font-family: 'Exo 2', 'Work Sans', sans-serif;
+  text-shadow: 0 2px 14px #1e1e1e16;
+  z-index: 3;
+  position: relative;
+}
+body.light-mode .cta-title {
+  text-shadow: 0 1.5px 4px #fff6e4;
+}
+
+.cta-desc {
+  font-size: 1.1em;
+  color: #fff;
+  opacity: 0.94;
+  margin-bottom: 1.8em;
+  font-weight: 400;
+  line-height: 1.6;
+  z-index: 3;
+  position: relative;
+}
+body.light-mode .cta-desc {
+  color: #232329;
+  opacity: 0.98;
+}
+
+/* ==== BOTTONI (già luxury, non toccare qui) ==== */
+
+@media (max-width: 600px) {
+  .cta-banner { max-width: 98vw; padding: 1.3em 0.7em 1em 0.7em; border-radius: 1em;}
+  .cta-title { font-size: 1.28em; }
+  .cta-desc { font-size: 1em; }
+  .cta-btn { font-size: 0.98em; padding: 0.8em 1.3em;}
+}

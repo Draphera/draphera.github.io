@@ -1,0 +1,73 @@
+/* ================================
+   HERO DARK THEME – Draphera
+================================= */
+
+.hero-minimal {
+  background-color: #1c1c1e;
+  background-image: url('../img/bg.png');
+}
+
+.hero-minimal::before {
+  background: linear-gradient(
+    180deg,
+    rgba(112, 58, 214, 0.38) 0%,
+    #1c1c1e 100%
+  );
+}
+
+.hero-minimal::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 65%,
+    #1e1e1e 100%
+  );
+}
+
+.hero-light-glow {
+  background: radial-gradient(circle, rgba(224,198,99,0.22) 0%, transparent 70%);
+  opacity: 0.75;
+}
+
+.hero-bg-grid {
+  background-image: url('../img/bg-grid-hero-m.svg');
+  filter: brightness(1) saturate(1.2) contrast(1.05);
+  opacity: 0.22;
+}
+
+.hero-content h1 {
+  color: #ffffff;
+}
+
+.hero-content p.lead {
+  color: #cfcfcf;
+}
+
+.hero-badge {
+  color: #e0c663;
+  background: rgba(224, 198, 99, 0.06);
+  border: 1px solid rgba(224, 198, 99, 0.25);
+  animation: badgePulse 5s infinite;
+}
+
+.hero-badge:hover {
+  background: rgba(224, 198, 99, 0.12);
+  box-shadow: 0 0 14px rgba(224, 198, 99, 0.25);
+}
+
+.hero-badge svg circle {
+  stroke: #e0c663;
+}
+
+.form-wrapper input[type="email"] {
+  background: #18181b;
+  color: #ffffff;
+  border-color: #3a3a3c;
+}
+
+.form-wrapper button {
+  background: #e0c663;
+  color: #232329;
+}
+.form-wrapper button:hover {
+  background: #f1db6f;
+}

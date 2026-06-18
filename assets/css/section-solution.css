@@ -1,0 +1,170 @@
+:root {
+  --bg: #1e1e1e;
+  --text: #fff;
+  --accent: #e0c663;
+  --step-glow: 0 0 18px #e0c66340;
+  --step-bg: rgba(224,198,99,0.13);
+  --cta-bg: linear-gradient(90deg, #e0c663 70%, #fff8e5 120%);
+  --cta-text: #1e1e1e;
+}
+body.light-mode {
+  --bg: #fff8e5;
+  --text: #222;
+  --accent: #b09a50;
+  --step-glow: 0 0 14px #b09a5050;
+  --step-bg: rgba(176,154,80,0.16);
+  --cta-bg: linear-gradient(90deg, #ffe49a 60%, #b09a50 120%);
+  --cta-text: #232329;
+}
+
+/* Sezione che deve fondersi */
+.solutions-steps {
+  background: #1e1e1e;
+}
+
+
+body.light-mode .solutions-steps {
+  background: #fff;
+  color: var(--text, #232329);
+}
+
+.solutions-steps .page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.solutions-title {
+  font-size: 2.12rem;
+  font-weight: 800;
+  margin-bottom: 0.26em;
+  color: var(--accent, #e0c663);
+  font-family: 'Exo 2', 'Work Sans', sans-serif;
+  letter-spacing: -0.5px;
+}
+.solutions-desc {
+  font-size: 1.16em;
+  color: var(--text, #fff);
+  margin-bottom: 1.35em;
+  opacity: 0.95;
+  font-weight: 400;
+}
+.solutions-step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.solution-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.05em;
+  gap: 1.2em;
+  position: relative;
+  transition: background 0.18s;
+  border-radius: 1.2em;
+}
+.solution-step:hover .solution-step-icon .lucide {
+  filter: drop-shadow(0 0 22px #e0c663bb);
+  transform: scale(1.10) rotate(-1deg);
+  background: color-mix(in srgb, var(--accent, #e0c663) 28%, transparent);
+}
+.solution-step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  min-height: 64px;
+  margin-right: 0.15em;
+  position: relative;
+}
+.solution-step-icon .lucide {
+  width: 56px; height: 56px;
+  color: var(--accent, #e0c663);
+  stroke: var(--accent, #e0c663);
+  background: var(--step-bg, rgba(224,198,99,0.13));
+  border-radius: 50%;
+  padding: 0.74em;
+  box-shadow: var(--step-glow, 0 0 18px #e0c66340);
+  display: block;
+  margin: 0 auto;
+  transition: filter 0.18s, background 0.21s, transform 0.17s;
+}
+.solution-step-content h3 {
+  font-size: 1.22em;
+  font-weight: 700;
+  color: var(--accent, #e0c663);
+  margin-bottom: 0.17em;
+  letter-spacing: -0.4px;
+  text-shadow: 0 1px 8px #1e1e1e20;
+}
+.solution-step-content p {
+  font-size: 1em;
+  color: var(--text, #fff);
+  opacity: 0.88;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+.solutions-cta {
+  margin-top: 2.7em;
+  text-align: center;
+}
+.solutions-cta {
+  background: var(--cta-bg, #e0c663);
+  color: var(--cta-text, #1e1e1e);
+  font-weight: 700;
+  font-size: 1.12em;
+  padding: 1.1em 2.2em;
+  border-radius: 2em;
+  box-shadow: 0 2px 16px 0 rgba(224,198,99,0.10);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  transition: background 0.19s, color 0.18s, box-shadow 0.2s;
+}
+.solutions-cta {
+  background: linear-gradient(92deg, #fff8e5 40%, #e0c663 100%);
+  color: #1e1e1e;
+  box-shadow: 0 4px 28px 0 rgba(224,198,99,0.20);
+}
+.solutions-cta .btn-accent svg {
+  width: 1.2em; height: 1.2em;
+  stroke: currentColor;
+  margin-left: 0.3em;
+}
+
+/* Numerazione step opzionale */
+.solution-step::before {
+  content: attr(data-step);
+  display: none; /* metti block se vuoi mostrare il numero step */
+  font-weight: 800;
+  font-size: 1.18em;
+  color: var(--accent, #e0c663);
+  margin-right: 0.9em;
+  position: relative;
+  top: 2px;
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .solutions-steps .page-container { padding: 0 8px; }
+}
+@media (max-width: 700px) {
+  .solutions-title { font-size: 1.38em; }
+  .solution-step { gap: 0.8em; }
+}
+@media (max-width: 600px) {
+  .solutions-title { font-size: 1.12em; }
+  .solution-step {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+    margin-bottom: 1.7em;
+  }
+  .solution-step-icon .lucide { width: 38px; height: 38px; }
+  .solution-step-content h3 { font-size: 1em; }
+  .solutions-cta .btn-accent { font-size: 1em; padding: 1em 1.2em; }
+}
+
+

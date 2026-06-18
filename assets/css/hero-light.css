@@ -1,0 +1,60 @@
+/* ================================
+   HERO LIGHT THEME – Draphera
+================================= */
+
+.hero-minimal {
+  background-color: #ffffff;
+  background-image: url('../img/bg.png');
+}
+
+.hero-minimal::before {
+  background: linear-gradient(
+    180deg,
+    rgba(240, 240, 240, 0.9) 0%,
+    #ffffff 100%
+  );
+}
+
+.hero-minimal::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 60%,
+    #ffffff 100%
+  );
+}
+
+.hero-light-glow {
+  background: radial-gradient(circle, rgba(180,180,180,0.12) 0%, transparent 70%);
+  opacity: 0.25;
+}
+
+.hero-bg-grid {
+  background-image: url('../img/bg-grid-hero-m.svg');
+  filter: brightness(1.05) contrast(1.02);
+  opacity: 0.06;
+}
+
+.hero-content h1 {
+  color: #1e1e1e;
+}
+
+.hero-content p.lead {
+  color: #1e1e1e;
+}
+
+.hero-badge {
+  color: #444;
+  background: rgba(240, 240, 240, 0.5);
+  border: 1px solid rgba(200, 200, 200, 0.4);
+  animation: badgePulse 5s infinite;
+}
+
+.hero-badge:hover {
+  background: rgba(230, 230, 230, 0.6);
+  box-shadow: 0 0 12px rgba(200, 200, 200, 0.18);
+}
+
+.hero-badge svg circle {
+  stroke: #444;
+}
+
