@@ -1,51 +1,107 @@
 # Draphera.com
 
-Sito statico principale dell'ecosistema Draphera.
+Static public website for the Draphera ecosystem.
 
-## Struttura
+Draphera.com is the main narrative and brand portal for Draphera: identity, manifesto, ecosystem overview, VISION access and contact entry point. The site is intentionally static, lightweight and deployable on GitHub Pages or Vercel without a build pipeline.
+
+## Production URL
+
+- GitHub Pages: https://draphera.github.io/
+- Repository: https://github.com/Draphera/draphera.github.io
+
+## Architecture
 
 ```text
 /
-├── index.html
-├── manifesto.html
-├── ecosystem.html
-├── vision.html
-├── contact.html
-├── assets/
-│   ├── css/main.css
-│   ├── js/main.js
-│   ├── img/
-│   └── icons/
-└── README.md
+|-- index.html
+|-- manifesto.html
+|-- ecosystem.html
+|-- vision.html
+|-- contact.html
+|-- privacy.html
+|-- assets/
+|   |-- css/
+|   |   |-- main.css
+|   |-- js/
+|   |   |-- main.js
+|   |-- img/
+|   |-- icons/
+|-- README.md
 ```
 
-## Sviluppo locale
+## Technical Profile
 
-Il sito non richiede build o dipendenze. Apri `index.html` nel browser, oppure usa un server statico locale:
+- Static HTML, CSS and vanilla JavaScript.
+- No React, Next.js, Vue or build dependency.
+- GitHub Pages compatible from repository root.
+- Responsive layout for desktop, tablet and mobile.
+- Light/dark theme toggle with local browser persistence.
+- Lightweight language support for IT, EN, ES, FR and DE using `?lang=` plus localStorage.
+- Contact form is static and does not transmit data until connected to Formspree, Netlify Forms or a future backend.
 
-```bash
-python -m http.server 8080
+## Brand And UI Notes
+
+- Premium dark violet / black visual system with gold accents.
+- Uses existing Draphera visual assets in `assets/img/`.
+- Secondary pages reuse the main hero visual language for consistency.
+- Main home CTAs are intentionally limited to VISION and the contact form.
+- Footer includes ecosystem links, privacy and official social channels.
+
+## Local Development
+
+Open `index.html` directly in the browser, or serve the folder with a local static server.
+
+With PHP/XAMPP:
+
+```powershell
+& 'C:\xampp\php\php.exe' -S 127.0.0.1:8080 -t 'C:\xampp\htdocs\draphera.com'
 ```
 
-Poi visita `http://localhost:8080`.
+Then visit:
 
-## Deploy su GitHub Pages
+```text
+http://127.0.0.1:8080/
+```
 
-1. Pubblica i file nella branch principale del repository.
-2. In GitHub, apri `Settings -> Pages`.
-3. Seleziona la branch e la cartella root.
-4. Salva la configurazione.
+## Deployment: GitHub Pages
 
-## Deploy su Vercel
+This repository is intended to publish from `main` at repository root.
 
-1. Importa il repository in Vercel.
-2. Lascia vuoto il build command.
-3. Imposta la output directory su `.` se richiesto.
-4. Pubblica.
+1. Commit changes locally.
+2. Push to `main`.
+3. Open `Settings -> Pages` on GitHub.
+4. Confirm:
+   - Source: `Deploy from a branch`
+   - Branch: `main`
+   - Folder: `/ root`
 
-## Note
+## Pre-Push Checklist
 
-- `contact.html` contiene un form statico pronto per Formspree, Netlify Forms o backend futuro.
-- Il selettore lingua supporta `IT / EN / ES / FR / DE` con JavaScript vanilla, parametro `?lang=` e memoria locale. La base resta statica e puo essere estesa senza introdurre un sistema i18n complesso.
-- La home mantiene solo due CTA principali: VISION Observatory e modulo contatti.
-- Gli asset grafici storici in `assets/img/` sono riutilizzati per mantenere la pelle visuale Draphera.
+Run before publishing meaningful changes:
+
+```powershell
+node --check assets\js\main.js
+git status --short
+```
+
+Manual browser checks:
+
+- Home loads in dark mode.
+- Light mode keeps hero text readable.
+- Desktop, tablet and mobile have no horizontal overflow.
+- Language selector updates visible copy.
+- Contact form remains static and does not submit data.
+- Footer links and social links open correctly.
+
+## Social Channels
+
+- Facebook: https://www.facebook.com/draphera
+- Instagram: https://www.instagram.com/draphera
+- LinkedIn: https://www.linkedin.com/company/draphera
+
+## Maintenance
+
+- Keep the site static unless a real integration requires otherwise.
+- Prefer edits in `assets/css/main.css` and `assets/js/main.js`.
+- Avoid adding heavy dependencies.
+- Keep claims conservative: ecosystem, infrastructure, private preview, vector technologies, technical patternmaking, verifiable data, interoperability and digital assets.

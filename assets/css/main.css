@@ -360,6 +360,12 @@ body.light-mode .brand-logo-light {
     url("../img/bg.png") center / cover no-repeat;
 }
 
+body.light-mode .hero-section {
+  background:
+    linear-gradient(180deg, rgba(18, 12, 28, 0.72), rgba(18, 12, 28, 0.42) 42%, rgba(251, 248, 238, 0.98) 100%),
+    url("../img/bg.png") center / cover no-repeat;
+}
+
 .hero-section::after,
 .page-hero::after {
   content: "";
@@ -368,6 +374,11 @@ body.light-mode .brand-logo-light {
   height: 36%;
   background: linear-gradient(to bottom, transparent, var(--bg));
   pointer-events: none;
+}
+
+body.light-mode .hero-section::after,
+body.light-mode .page-hero::after {
+  background: linear-gradient(to bottom, transparent, var(--bg));
 }
 
 .hero-grid {
@@ -428,6 +439,19 @@ body.light-mode .brand-logo-light {
 .hero-content {
   text-align: center;
   max-width: 940px;
+}
+
+body.light-mode .hero-content h1,
+body.light-mode .hero-content .hero-lead,
+body.light-mode .page-hero h1,
+body.light-mode .page-hero p {
+  color: #fffaf0;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.42);
+}
+
+body.light-mode .hero-content .eyebrow,
+body.light-mode .page-hero .eyebrow {
+  color: #f1dc83;
 }
 
 .eyebrow {
@@ -527,6 +551,10 @@ p {
 
 .statement-block {
   max-width: 980px;
+}
+
+.mission-section .statement-block {
+  max-width: var(--container);
 }
 
 .statement-block h2 {
@@ -714,6 +742,12 @@ p {
     url("../img/bg.png") center / cover no-repeat;
 }
 
+body.light-mode .page-hero {
+  background:
+    linear-gradient(180deg, rgba(18, 12, 28, 0.72), rgba(18, 12, 28, 0.38) 56%, rgba(251, 248, 238, 0.98)),
+    url("../img/bg.png") center / cover no-repeat;
+}
+
 .page-hero h1 {
   font-size: clamp(2.8rem, 6vw, 6.2rem);
 }
@@ -724,6 +758,24 @@ p {
 
 .manifesto-document {
   max-width: 920px;
+}
+
+.legal-document {
+  max-width: 920px;
+}
+
+.legal-document article {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-violet);
+}
+
+.legal-document article:first-child {
+  padding-top: 0;
+}
+
+.legal-document p {
+  max-width: 760px;
+  margin-bottom: 0;
 }
 
 .manifesto-document article {
@@ -871,13 +923,24 @@ body.light-mode .footer-logo {
   content: url("../img/logo-dark.png");
 }
 
-.footer-links {
+.footer-links,
+.footer-social {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 1rem;
   color: var(--muted);
   font-weight: 700;
+}
+
+.footer-social {
+  grid-column: 2;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.footer-social a {
+  color: var(--gold-strong);
 }
 
 .footer-note,
@@ -1085,8 +1148,13 @@ body.light-mode .footer-logo {
   }
 
   .footer-links,
+  .footer-social,
   .copyright {
     justify-content: flex-start;
     text-align: left;
+  }
+
+  .footer-social {
+    grid-column: auto;
   }
 }
