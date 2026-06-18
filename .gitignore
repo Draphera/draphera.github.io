@@ -4,5 +4,8 @@ pages/
 partials/
 *.php
 php-server*.log
+.jekyll-cache/
+.jekyll-metadata
+_site/
 .DS_Store
 Thumbs.db

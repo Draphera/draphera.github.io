@@ -1,0 +1,7 @@
+title: Draphera
+description: Ecosistema indipendente dedicato alla modellistica tecnica, ai dati vettoriali e alla conoscenza industriale.
+url: https://draphera.com
+baseurl: ""
+permalink: /journal/:title/
+timezone: Europe/Rome
+markdown: kramdown

@@ -309,6 +309,7 @@ const pageTitles = {
   contact: { it: "Richiedi Accesso a Draphera", en: "Request Access to Draphera" },
   about: { it: "About Draphera", en: "About Draphera" },
   journal: { it: "Draphera Journal", en: "Draphera Journal" },
+  research: { it: "Research Index", en: "Research Index" },
   privacy: { it: "Privacy - Draphera", en: "Privacy - Draphera" }
 };
 
@@ -340,6 +341,10 @@ const pageDescriptions = {
   journal: {
     it: "Draphera Journal: ricerca, architetture, interoperabilità, dati vettoriali e conoscenza tecnica.",
     en: "Draphera Journal: research, architectures, interoperability, vector data and technical knowledge."
+  },
+  research: {
+    it: "Research Index: aree di studio, formati e infrastrutture tecniche osservate nell'ecosistema Draphera.",
+    en: "Research Index: study areas, formats and technical infrastructure observed in the Draphera ecosystem."
   },
   privacy: {
     it: "Informativa privacy essenziale del sito Draphera.",
@@ -377,7 +382,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const url = new URL(href, window.location.href);
       if (url.origin !== window.location.origin) return;
       url.searchParams.set("lang", lang);
-      link.setAttribute("href", `${url.pathname.split("/").pop() || "index.html"}${url.search}${url.hash}`);
+      link.setAttribute("href", `${url.pathname}${url.search}${url.hash}`);
     });
   };
 

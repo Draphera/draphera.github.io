@@ -1,0 +1,46 @@
+---
+layout: default
+title: "Draphera Journal"
+description: "Ricerca, architetture, interoperabilità, dati vettoriali e conoscenza tecnica."
+permalink: /journal/
+---
+<section class="page-hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container narrow">
+    <p class="eyebrow">Journal</p>
+    <h1>Draphera Journal</h1>
+    <p>Ricerca, architetture, interoperabilità, dati vettoriali e conoscenza tecnica.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% if site.posts.size > 0 %}
+    <div class="card-grid technical-grid">
+      {% for post in site.posts %}
+      <article class="surface-card featured-card">
+        <span class="card-index">{{ post.date | date: "%d/%m/%Y" }}</span>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.description }}</p>
+        <p class="eyebrow">{{ post.category }}</p>
+        <a class="text-link" href="{{ post.url | relative_url }}">Leggi</a>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <article class="surface-card featured-card"><h2>Archivio in preparazione</h2><p>Il Journal è pronto per futuri articoli tecnici.</p></article>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container beta-panel">
+    <div>
+      <p class="eyebrow">Newsletter</p>
+      <h2>Ricevi aggiornamenti dal Journal</h2>
+      <p>Aggiornamenti su ricerca, interoperabilità, dati vettoriali e conoscenza tecnica.</p>
+      <!-- TODO: integrare newsletter futura con Resend / Buttondown / ConvertKit / backend custom. -->
+    </div>
+    <div class="form-field"><label for="newsletter-email">Email</label><input id="newsletter-email" type="email" placeholder="email@example.com" disabled></div>
+  </div>
+</section>

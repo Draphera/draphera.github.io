@@ -1,0 +1,20 @@
+{
+  "name": "Draphera",
+  "short_name": "Draphera",
+  "description": "Ecosistema indipendente dedicato alla modellistica tecnica, ai dati vettoriali e alla conoscenza industriale.",
+  "icons": [
+    {
+      "src": "/assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#151018",
+  "background_color": "#09080c",
+  "display": "standalone"
+}
