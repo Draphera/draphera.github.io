@@ -1,15 +1,25 @@
 # Draphera.com
 
-Static public website for the Draphera ecosystem.
+Sito statico ufficiale dell'ecosistema Draphera.
 
-Draphera.com is the main narrative and brand portal for Draphera: identity, manifesto, ecosystem overview, VISION access and contact entry point. The site is intentionally static, lightweight and deployable on GitHub Pages or Vercel without a build pipeline.
+Draphera.com comunica l'identità istituzionale del progetto: un ecosistema indipendente dedicato a modellistica tecnica, dati vettoriali, interoperabilità, preservazione della conoscenza industriale e infrastrutture digitali. VISION è l'infrastruttura tecnica collegata che alimenta la ricerca e lo sviluppo.
 
-## Production URL
+## URL
 
 - GitHub Pages: https://draphera.github.io/
 - Repository: https://github.com/Draphera/draphera.github.io
+- VISION Observatory: https://vision-argus-observatory.vercel.app/
 
-## Architecture
+## Stack
+
+- HTML statico
+- CSS moderno con custom properties
+- JavaScript vanilla
+- Nessun framework frontend
+- Nessuna build obbligatoria
+- Compatibile con GitHub Pages e Vercel
+
+## Struttura
 
 ```text
 /
@@ -17,6 +27,7 @@ Draphera.com is the main narrative and brand portal for Draphera: identity, mani
 |-- manifesto.html
 |-- ecosystem.html
 |-- vision.html
+|-- founder.html
 |-- contact.html
 |-- privacy.html
 |-- assets/
@@ -29,79 +40,78 @@ Draphera.com is the main narrative and brand portal for Draphera: identity, mani
 |-- README.md
 ```
 
-## Technical Profile
+## Architettura narrativa
 
-- Static HTML, CSS and vanilla JavaScript.
-- No React, Next.js, Vue or build dependency.
-- GitHub Pages compatible from repository root.
-- Responsive layout for desktop, tablet and mobile.
-- Light/dark theme toggle with local browser persistence.
-- Lightweight language support for IT, EN, ES, FR and DE using `?lang=` plus localStorage.
-- Contact form is static and does not transmit data until connected to Formspree, Netlify Forms or a future backend.
-
-## Brand And UI Notes
-
-- Premium dark violet / black visual system with gold accents.
-- Uses existing Draphera visual assets in `assets/img/`.
-- Secondary pages reuse the main hero visual language for consistency.
-- Main home CTAs are intentionally limited to VISION and the contact form.
-- Footer includes ecosystem links, privacy and official social channels.
+- `index.html`: portale principale, manifesto sintetico, relazione Draphera/VISION, ricerca, standard studiati, iniziative future e accesso privato.
+- `ecosystem.html`: mappa dell'ecosistema Draphera.
+- `vision.html`: descrizione dell'infrastruttura tecnica VISION e collegamento all'Observatory.
+- `founder.html`: origine industriale e tecnologica del progetto.
+- `manifesto.html`: principi fondamentali.
+- `contact.html`: modulo statico pronto per futura integrazione.
+- `privacy.html`: informativa essenziale per il sito statico.
 
 ## Local Development
 
-Open `index.html` directly in the browser, or serve the folder with a local static server.
+Aprire direttamente `index.html` oppure usare un server locale.
 
-With PHP/XAMPP:
+Con PHP/XAMPP:
 
 ```powershell
 & 'C:\xampp\php\php.exe' -S 127.0.0.1:8080 -t 'C:\xampp\htdocs\draphera.com'
 ```
 
-Then visit:
+Poi visitare:
 
 ```text
 http://127.0.0.1:8080/
 ```
 
-## Deployment: GitHub Pages
+## Deploy GitHub Pages
 
-This repository is intended to publish from `main` at repository root.
+Il repository pubblica da `main` nella root.
 
-1. Commit changes locally.
-2. Push to `main`.
-3. Open `Settings -> Pages` on GitHub.
-4. Confirm:
+1. Committare le modifiche.
+2. Fare push su `main`.
+3. Verificare in GitHub `Settings -> Pages`:
    - Source: `Deploy from a branch`
    - Branch: `main`
    - Folder: `/ root`
 
-## Pre-Push Checklist
+## Deploy Vercel
 
-Run before publishing meaningful changes:
+1. Importare il repository.
+2. Lasciare vuoto il build command.
+3. Impostare output directory su `.` se richiesto.
+4. Pubblicare.
+
+## Checklist pre-push
 
 ```powershell
 node --check assets\js\main.js
 git status --short
 ```
 
-Manual browser checks:
+Verifiche manuali:
 
-- Home loads in dark mode.
-- Light mode keeps hero text readable.
-- Desktop, tablet and mobile have no horizontal overflow.
-- Language selector updates visible copy.
-- Contact form remains static and does not submit data.
-- Footer links and social links open correctly.
+- Home desktop/tablet/mobile senza overflow orizzontale.
+- Tema chiaro e scuro leggibili, soprattutto hero.
+- Menu mobile funzionante.
+- Footer completo con Privacy e canali social.
+- Link VISION verso Observatory funzionante.
+- Contact form statico: nessun dato inviato finché non viene integrato un backend.
 
-## Social Channels
+## Lingue
+
+La versione pubblica è in italiano. La UI mostra `IT | EN`, con EN disabilitato finché la versione inglese completa non viene finalizzata.
+
+## Social
 
 - Facebook: https://www.facebook.com/draphera
 - Instagram: https://www.instagram.com/draphera
 - LinkedIn: https://www.linkedin.com/company/draphera
 
-## Maintenance
+## Note di posizionamento
 
-- Keep the site static unless a real integration requires otherwise.
-- Prefer edits in `assets/css/main.css` and `assets/js/main.js`.
-- Avoid adding heavy dependencies.
-- Keep claims conservative: ecosystem, infrastructure, private preview, vector technologies, technical patternmaking, verifiable data, interoperability and digital assets.
+Non presentare Draphera come software house generica, brand moda o startup AI. Il sito deve comunicare:
+
+> Draphera è un ecosistema di ricerca e infrastruttura nato dall'esperienza diretta nelle tecnologie industriali e orientato alla preservazione e valorizzazione della conoscenza tecnica.

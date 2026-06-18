@@ -277,6 +277,11 @@ body.light-mode .brand-logo-light {
   font-weight: 700;
 }
 
+.language-switch button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
 .language-switch [aria-current="true"] {
   background: rgba(224, 198, 99, 0.14);
   color: var(--gold-strong);
@@ -572,12 +577,15 @@ p {
 }
 
 .ecosystem-grid,
-.technical-grid {
+.technical-grid,
+.research-grid,
+.future-grid {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .ecosystem-grid .surface-card,
-.technical-grid .surface-card {
+.technical-grid .surface-card,
+.research-grid .surface-card {
   grid-column: span 3;
 }
 
@@ -587,6 +595,10 @@ p {
 
 .technical-grid .surface-card {
   grid-column: span 4;
+}
+
+.future-grid .surface-card {
+  grid-column: span 6;
 }
 
 .surface-card,
@@ -697,7 +709,7 @@ p {
 
 .manifesto-lines {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1px;
   margin: 2rem 0;
   border: 1px solid var(--border);
@@ -813,6 +825,11 @@ body.light-mode .page-hero {
   background: var(--border);
 }
 
+.compact-map {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 0;
+}
+
 .map-core,
 .map-branch {
   min-height: 92px;
@@ -835,6 +852,40 @@ body.light-mode .page-hero {
 .map-branch {
   color: var(--text);
   background: var(--surface-strong);
+}
+
+.badge-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 2rem 0 1.25rem;
+}
+
+.badge-cloud span,
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0.42rem 0.72rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(224, 198, 99, 0.08);
+  color: var(--gold-strong);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.status-badge {
+  margin-bottom: 1.2rem;
+}
+
+.legal-note {
+  max-width: 920px;
+  margin-top: 1rem;
+  color: var(--quiet);
+  font-size: 0.92rem;
 }
 
 .contact-layout {
@@ -1028,7 +1079,9 @@ body.light-mode .footer-logo {
   }
 
   .ecosystem-grid .surface-card,
-  .technical-grid .surface-card {
+  .technical-grid .surface-card,
+  .research-grid .surface-card,
+  .future-grid .surface-card {
     grid-column: span 6;
   }
 
@@ -1114,13 +1167,16 @@ body.light-mode .footer-logo {
   .compact-grid,
   .manifesto-lines,
   .access-form,
-  .system-map {
+  .system-map,
+  .compact-map {
     grid-template-columns: 1fr;
   }
 
   .ecosystem-grid .surface-card,
   .ecosystem-grid .featured-card,
-  .technical-grid .surface-card {
+  .technical-grid .surface-card,
+  .research-grid .surface-card,
+  .future-grid .surface-card {
     grid-column: 1 / -1;
   }
 
