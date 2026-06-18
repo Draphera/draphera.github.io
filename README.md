@@ -2,7 +2,7 @@
 
 Sito statico ufficiale dell'ecosistema Draphera.
 
-Draphera.com comunica l'identità istituzionale del progetto: un ecosistema indipendente dedicato a modellistica tecnica, dati vettoriali, interoperabilità, preservazione della conoscenza industriale e infrastrutture digitali. VISION è l'infrastruttura tecnica collegata che alimenta ricerca e sviluppo.
+Draphera.com comunica una realtà tecnica concreta: un ecosistema indipendente di ricerca e infrastruttura dedicato alla modellistica tecnica, ai dati vettoriali, all'interoperabilità e alla preservazione della conoscenza industriale. VISION è l'infrastruttura tecnica sviluppata all'interno di Draphera.
 
 ## URL
 
@@ -24,10 +24,11 @@ Draphera.com comunica l'identità istituzionale del progetto: un ecosistema indi
 ```text
 /
 |-- index.html
-|-- manifesto.html
 |-- ecosystem.html
 |-- vision.html
-|-- founder.html
+|-- manifesto.html
+|-- about.html
+|-- blog.html
 |-- contact.html
 |-- privacy.html
 |-- assets/
@@ -42,11 +43,12 @@ Draphera.com comunica l'identità istituzionale del progetto: un ecosistema indi
 
 ## Architettura narrativa
 
-- `index.html`: portale principale, relazione Draphera/VISION, ricerca, standard studiati, manifesto sintetico, iniziative future e accesso privato.
-- `ecosystem.html`: mappa dell'ecosistema Draphera.
-- `vision.html`: descrizione dell'infrastruttura tecnica VISION e collegamento all'Observatory.
-- `founder.html`: origine industriale e tecnologica del progetto.
-- `manifesto.html`: principi fondamentali.
+- `index.html`: portale principale con hero, problema, identità, ecosistema, VISION, ricerca, standard studiati, manifesto e journal.
+- `ecosystem.html`: mappa essenziale con VISION, Ricerca e Knowledge.
+- `vision.html`: laboratorio tecnico di Draphera e collegamento all'Observatory.
+- `manifesto.html`: cinque principi fondamentali.
+- `about.html`: origini, missione, principi e ruolo di VISION in forma breve.
+- `blog.html`: struttura pronta per futuri articoli tecnici.
 - `contact.html`: modulo statico pronto per futura integrazione.
 - `privacy.html`: informativa essenziale per il sito statico.
 
@@ -88,6 +90,7 @@ Il repository pubblica da `main` nella root.
 
 ```powershell
 node --check assets\js\main.js
+git -c safe.directory=C:/xampp/htdocs/draphera.com diff --check
 git -c safe.directory=C:/xampp/htdocs/draphera.com status --short
 ```
 
@@ -96,9 +99,9 @@ Verifiche manuali:
 - Home desktop/tablet/mobile senza overflow orizzontale.
 - Tema chiaro e scuro leggibili, soprattutto hero e pagine secondarie.
 - Menu mobile funzionante da tastiera e touch.
-- Footer completo con Privacy e canali social.
+- Footer completo con About Draphera, Manifesto, VISION, Contatti, Blog, Privacy e Credits.
 - Link VISION verso Observatory funzionante.
-- Contact form statico: nessun dato inviato finché non viene integrato un backend.
+- Modulo di accesso statico: nessun dato inviato finché non viene integrato un backend.
 - SEO base presente su ogni pagina: title, description, canonical, Open Graph.
 
 ## Lingue
@@ -113,6 +116,6 @@ La versione pubblica è in italiano. La UI mostra `IT | EN`, con EN disabilitato
 
 ## Note di posizionamento
 
-Non presentare Draphera come software house generica, brand moda o startup AI. Il sito deve comunicare:
+Il sito non presenta Draphera come software house, startup AI, brand moda, SaaS o personal brand. Il messaggio guida è:
 
-> Draphera è un ecosistema di ricerca e infrastruttura nato dall'esperienza diretta nelle tecnologie industriali e orientato alla preservazione e valorizzazione della conoscenza tecnica.
+> Draphera è un ecosistema indipendente di ricerca e infrastruttura dedicato alla modellistica tecnica, ai dati vettoriali e alla preservazione della conoscenza industriale.

@@ -817,7 +817,7 @@ body.light-mode .page-hero {
 
 .system-map {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1px;
   margin-bottom: 2rem;
   border-radius: 8px;
