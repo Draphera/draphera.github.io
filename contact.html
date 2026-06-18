@@ -22,8 +22,8 @@
     <nav class="nav-shell" aria-label="Navigazione principale">
       <a class="brand-mark" href="./index.html" aria-label="Draphera home"><img class="brand-logo brand-logo-dark" src="./assets/img/logo-light.png" alt="Draphera"><img class="brand-logo brand-logo-light" src="./assets/img/logo-dark.png" alt="" aria-hidden="true"></a>
       <button class="nav-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu"><span class="sr-only" data-i18n="common.openMenu">Apri menu</span><span></span><span></span><span></span></button>
-      <div class="site-menu" id="site-menu" data-menu><a href="./ecosystem.html" data-i18n="nav.ecosystem">Ecosistema</a><a href="./vision.html">VISION</a><a href="./index.html#ricerca" data-i18n="nav.research">Ricerca</a><a href="./blog.html" data-i18n="nav.blog">Blog</a><a href="./manifesto.html" data-i18n="nav.manifesto">Manifesto</a><a href="./contact.html" aria-current="page" data-i18n="nav.access">Accesso</a></div>
-      <div class="nav-actions"><button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambia tema" data-theme-icon>☾</button><div class="language-switch" aria-label="Selettore lingua"><button type="button" data-lang-option="it" aria-current="true">IT</button><button type="button" disabled aria-disabled="true" title="English version in preparation">EN</button></div><a class="btn btn-primary nav-cta" href="./contact.html" data-i18n="cta.accessRequest">Richiedi Accesso</a></div>
+      <div class="site-menu" id="site-menu" data-menu><a href="./ecosystem.html" data-i18n="nav.ecosystem">Ecosistema</a><a href="./vision.html">VISION</a><a href="./index.html#ricerca" data-i18n="nav.research">Ricerca</a><a href="./blog.html" data-i18n="nav.journal">Journal</a><a href="./manifesto.html" data-i18n="nav.manifesto">Manifesto</a><a href="./contact.html" aria-current="page" data-i18n="nav.access">Accesso</a></div>
+      <div class="nav-actions"><button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambia tema" data-theme-icon>☾</button><div class="language-switch" aria-label="Selettore lingua"><button type="button" data-lang-option="it" aria-current="true">IT</button><button type="button" data-lang-option="en">EN</button></div><a class="btn btn-primary nav-cta" href="./contact.html" data-i18n="cta.accessRequest">Richiedi Accesso</a></div>
     </nav>
   </header>
 
@@ -31,7 +31,7 @@
     <section class="page-hero">
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="container narrow">
-        <p class="eyebrow" data-i18n="contact.eyebrow">Accesso</p>
+        <p class="eyebrow" data-i18n="nav.access">Accesso</p>
         <h1 data-i18n="contact.title">Richiedi Accesso a Draphera</h1>
         <p data-i18n="contact.lead">Draphera è attualmente un ecosistema indipendente di ricerca e infrastruttura. Il modulo è predisposto per future integrazioni.</p>
       </div>
@@ -44,13 +44,13 @@
           <div class="form-field"><label for="name" data-i18n="form.name">Nome</label><input id="name" name="name" type="text" autocomplete="name" required></div>
           <div class="form-field"><label for="email" data-i18n="form.email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
           <div class="form-field"><label for="role" data-i18n="form.role">Azienda / ruolo</label><input id="role" name="role" type="text" autocomplete="organization"></div>
-          <div class="form-field"><label for="interest" data-i18n="form.interest">Area di interesse</label><select id="interest" name="interest"><option value="">Seleziona un'area</option><option>Modellistica tecnica</option><option>Dati vettoriali</option><option>Interoperabilità</option><option>VISION</option><option>Conoscenza industriale</option></select></div>
+          <div class="form-field"><label for="interest" data-i18n="form.interest">Area di interesse</label><select id="interest" name="interest"><option value="" data-i18n="form.optionDefault">Seleziona un'area</option><option data-i18n="form.optionPatternmaking">Modellistica tecnica</option><option data-i18n="form.optionVector">Dati vettoriali</option><option data-i18n="form.optionInterop">Interoperabilità</option><option data-i18n="form.optionVision">VISION</option><option data-i18n="form.optionKnowledge">Conoscenza industriale</option></select></div>
           <div class="form-field full"><label for="message" data-i18n="form.message">Messaggio</label><textarea id="message" name="message" rows="6"></textarea></div>
           <button class="btn btn-primary" type="submit" data-i18n="cta.accessRequest">Richiedi Accesso</button>
           <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         </form>
         <aside class="surface-card contact-aside">
-          <p class="eyebrow">Nota</p>
+          <p class="eyebrow">Info</p>
           <h2 data-i18n="contact.asideTitle">Modulo statico</h2>
           <p data-i18n="contact.asideText">Nessun dato viene inviato finché il form non sarà collegato a un servizio di raccolta o a un backend dedicato.</p>
         </aside>
@@ -60,8 +60,8 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div><img class="footer-logo" src="./assets/img/logo-light.png" alt="Draphera" loading="lazy"><p data-i18n="brand.claim">Nato dai Drappeggi. Costruito per il Futuro.</p><p class="footer-note">Draphera è stato avviato nel 2023 da Federico Giovannini.</p></div>
-      <nav class="footer-links" aria-label="Navigazione footer"><a href="./about.html" data-i18n="nav.about">About Draphera</a><a href="./manifesto.html" data-i18n="nav.manifesto">Manifesto</a><a href="./vision.html">VISION</a><a href="./contact.html" data-i18n="nav.contact">Contatti</a><a href="./blog.html" data-i18n="nav.blog">Blog</a><a href="./privacy.html" data-i18n="nav.privacy">Privacy</a><span>Credits</span></nav>
+      <div><img class="footer-logo" src="./assets/img/logo-light.png" alt="Draphera" loading="lazy"><p data-i18n="brand.claim">Nato dai Drappeggi. Costruito per il Futuro.</p><p class="footer-note" data-i18n="brand.stewardship">Draphera è stato avviato nel 2023 da Federico Giovannini.</p></div>
+      <nav class="footer-links" aria-label="Navigazione footer"><a href="./about.html" data-i18n="nav.about">About Draphera</a><a href="./manifesto.html" data-i18n="nav.manifesto">Manifesto</a><a href="./vision.html">VISION</a><a href="./blog.html" data-i18n="nav.journal">Journal</a><a href="./contact.html" data-i18n="nav.contact">Contatti</a><span data-i18n="nav.credits">Credits</span></nav>
       <nav class="footer-social" aria-label="Canali social Draphera"><a href="https://www.facebook.com/draphera" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/draphera" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/company/draphera" target="_blank" rel="noopener">LinkedIn</a></nav>
       <p class="footer-note" data-i18n="brand.note">Draphera è un ecosistema indipendente per tecnologie vettoriali, modellistica tecnica e infrastrutture digitali.</p>
       <p class="copyright">© <span data-year></span> Draphera. <span data-i18n="brand.rights">Tutti i diritti riservati.</span></p>

@@ -48,7 +48,7 @@ Draphera.com comunica una realtà tecnica concreta: un ecosistema indipendente d
 - `vision.html`: laboratorio tecnico di Draphera e collegamento all'Observatory.
 - `manifesto.html`: cinque principi fondamentali.
 - `about.html`: origini, missione, principi e ruolo di VISION in forma breve.
-- `blog.html`: struttura pronta per futuri articoli tecnici.
+- `blog.html`: Draphera Journal, struttura pronta per futuri articoli tecnici.
 - `contact.html`: modulo statico pronto per futura integrazione.
 - `privacy.html`: informativa essenziale per il sito statico.
 
@@ -99,14 +99,15 @@ Verifiche manuali:
 - Home desktop/tablet/mobile senza overflow orizzontale.
 - Tema chiaro e scuro leggibili, soprattutto hero e pagine secondarie.
 - Menu mobile funzionante da tastiera e touch.
-- Footer completo con About Draphera, Manifesto, VISION, Contatti, Blog, Privacy e Credits.
+- Footer completo con About Draphera, Manifesto, VISION, Journal, Contatti e Credits.
 - Link VISION verso Observatory funzionante.
 - Modulo di accesso statico: nessun dato inviato finché non viene integrato un backend.
 - SEO base presente su ogni pagina: title, description, canonical, Open Graph.
+- Versione italiana e inglese verificabili con `?lang=it` e `?lang=en`.
 
 ## Lingue
 
-La versione pubblica è in italiano. La UI mostra `IT | EN`, con EN disabilitato finché la versione inglese completa non viene finalizzata.
+La versione pubblica supporta italiano e inglese tramite JavaScript vanilla leggero. La lingua può essere impostata da query string (`?lang=it` o `?lang=en`) e viene salvata in `localStorage`.
 
 ## Social
 
