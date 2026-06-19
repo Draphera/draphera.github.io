@@ -98,7 +98,7 @@ Sono presenti:
 - `robots.txt`
 - favicon e icone Apple/Android
 - Open Graph e Twitter Card
-- immagine social preview in `assets/social/draphera-og.jpg`
+- immagine social preview in `assets/social/draphera-og-2025.jpg`
 - JSON-LD Organization e WebSite nella home
 - canonical per le pagine principali
 - redirect noindex da `blog.html` a `/journal/`

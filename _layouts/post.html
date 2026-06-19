@@ -1,13 +1,43 @@
 ---
 layout: default
 ---
-<article class="section">
-  <div class="container manifesto-document">
-    <p class="eyebrow">{{ page.category }}</p>
+<section class="page-hero post-hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container narrow">
+    <p class="eyebrow">{{ page.category | default: "Journal" }}</p>
     <h1>{{ page.title }}</h1>
-    <p>{{ page.date | date: "%d/%m/%Y" }}</p>
-    <div class="surface-card featured-card">
+    {% if page.description %}
+    <p>{{ page.description }}</p>
+    {% endif %}
+    <div class="post-meta" aria-label="Metadati articolo">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time>
+      <span>Draphera Journal</span>
+    </div>
+    {% if page.tags %}
+    <ul class="post-tags" aria-label="Tag articolo">
+      {% for tag in page.tags %}
+      <li>{{ tag }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+
+<article class="section post-section">
+  <div class="container post-shell">
+    <div class="post-content">
       {{ content }}
     </div>
   </div>
 </article>
+
+<section class="section">
+  <div class="container beta-panel post-next-panel">
+    <div>
+      <p class="eyebrow">Journal</p>
+      <h2>Continua la ricerca Draphera</h2>
+      <p>Note tecniche, interoperabilità, dati vettoriali e preservazione della conoscenza industriale.</p>
+    </div>
+    <a class="btn btn-secondary" href="/journal/">Torna al Journal</a>
+  </div>
+</section>

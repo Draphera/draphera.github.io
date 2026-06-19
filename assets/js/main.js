@@ -19,7 +19,7 @@ const translations = {
     "cta.openJournal": "Apri il Journal",
     "brand.claim": "Nato dai Drappeggi. Costruito per il Futuro.",
     "brand.note": "Draphera è un ecosistema indipendente per tecnologie vettoriali, modellistica tecnica e infrastrutture digitali.",
-    "brand.stewardship": "Draphera è stato avviato nel 2023 da Federico Giovannini.",
+    "brand.stewardship": "Draphera è stato avviato nel 2025 da Federico Giovannini.",
     "brand.rights": "Tutti i diritti riservati.",
 
     "home.title": "Draphera - Ricerca, dati vettoriali e conoscenza industriale",
@@ -89,7 +89,7 @@ const translations = {
     "about.structuredKnowledge": "Conoscenza Strutturata",
     "about.visionText": "VISION rappresenta l'infrastruttura tecnica sviluppata all'interno dell'ecosistema Draphera. È il laboratorio dove vengono studiati geometria vettoriale, formati CAD, interoperabilità, validazione e preservazione digitale.",
     "about.stewardshipTitle": "Stewardship",
-    "about.stewardshipText": "Draphera è stato avviato da Federico Giovannini nel 2023 ed è attualmente mantenuto come ecosistema indipendente di ricerca e sviluppo.",
+    "about.stewardshipText": "Draphera è stato avviato da Federico Giovannini nel 2025 ed è attualmente mantenuto come ecosistema indipendente di ricerca e sviluppo.",
 
     "ecosystem.title": "L'Ecosistema Draphera",
     "ecosystem.lead": "VISION, ricerca e knowledge: una struttura essenziale per dati vettoriali e conoscenza industriale.",
@@ -169,7 +169,7 @@ const translations = {
     "cta.openJournal": "Open the Journal",
     "brand.claim": "Born from Draping. Built for the Future.",
     "brand.note": "Draphera is an independent ecosystem for vector technologies, technical patternmaking and digital infrastructure.",
-    "brand.stewardship": "Draphera was started in 2023 by Federico Giovannini.",
+    "brand.stewardship": "Draphera was started in 2025 by Federico Giovannini.",
     "brand.rights": "All rights reserved.",
 
     "home.title": "Draphera - Research, vector data and industrial knowledge",
@@ -239,7 +239,7 @@ const translations = {
     "about.structuredKnowledge": "Structured Knowledge",
     "about.visionText": "VISION represents the technical infrastructure developed inside the Draphera ecosystem. It is the laboratory where vector geometry, CAD formats, interoperability, validation and digital preservation are studied.",
     "about.stewardshipTitle": "Stewardship",
-    "about.stewardshipText": "Draphera was started by Federico Giovannini in 2023 and is currently maintained as an independent research and development ecosystem.",
+    "about.stewardshipText": "Draphera was started by Federico Giovannini in 2025 and is currently maintained as an independent research and development ecosystem.",
 
     "ecosystem.title": "The Draphera Ecosystem",
     "ecosystem.lead": "VISION, research and knowledge: an essential structure for vector data and industrial knowledge.",
