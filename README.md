@@ -103,6 +103,30 @@ Sono presenti:
 - canonical per le pagine principali
 - redirect noindex da `blog.html` a `/journal/`
 
+## Resend e iscrizioni
+
+Il form contatti e il form newsletter inviano a `/api/subscribe`, endpoint serverless pensato per Vercel. Su GitHub Pages puro l'endpoint non viene eseguito.
+
+Variabili ambiente richieste su Vercel:
+
+```text
+RESEND_API_KEY=...
+RESEND_FROM=Draphera <noreply@draphera.com>
+RESEND_NOTIFY_TO=info@draphera.com
+```
+
+Variabile opzionale per aggiungere gli iscritti a una Audience Resend:
+
+```text
+RESEND_AUDIENCE_ID=...
+```
+
+Le chiavi non devono mai essere inserite nel JavaScript frontend.
+
+## Contatore locale
+
+`assets/js/main.js` mantiene un contatore visite non visibile nel `localStorage` del browser (`draphera-local-visits`). È locale al dispositivo e non sostituisce analytics server-side o Google Analytics.
+
 ## Local Development
 
 Per controllare le pagine statiche con XAMPP/PHP:

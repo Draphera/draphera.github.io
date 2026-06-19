@@ -123,8 +123,8 @@ const translations = {
 
     "contact.title": "Richiedi Accesso a Draphera",
     "contact.lead": "Draphera è attualmente un ecosistema indipendente di ricerca e infrastruttura. Il modulo è predisposto per future integrazioni.",
-    "contact.asideTitle": "Modulo statico",
-    "contact.asideText": "Nessun dato viene inviato finché il form non sarà collegato a un servizio di raccolta o a un backend dedicato.",
+    "contact.asideTitle": "Invio protetto",
+    "contact.asideText": "Le richieste vengono inviate tramite endpoint serverless e notifica email interna, senza esporre chiavi API nel browser.",
     "form.name": "Nome",
     "form.email": "Email",
     "form.role": "Azienda / ruolo",
@@ -137,6 +137,9 @@ const translations = {
     "form.optionKnowledge": "Conoscenza industriale",
     "form.message": "Messaggio",
     "form.staticStatus": "Il form è pronto per integrazione futura. Nessun dato è stato inviato.",
+    "form.sending": "Invio in corso...",
+    "form.success": "Richiesta ricevuta. Grazie.",
+    "form.error": "Invio non riuscito. Riprova tra poco.",
 
     "privacy.title": "Privacy",
     "privacy.lead": "Questa pagina descrive in modo essenziale come Draphera gestisce i dati raccolti attraverso il sito statico.",
@@ -273,8 +276,8 @@ const translations = {
 
     "contact.title": "Request Access to Draphera",
     "contact.lead": "Draphera is currently an independent research and infrastructure ecosystem. The form is prepared for future integrations.",
-    "contact.asideTitle": "Static form",
-    "contact.asideText": "No data is sent until the form is connected to a collection service or dedicated backend.",
+    "contact.asideTitle": "Protected submission",
+    "contact.asideText": "Requests are sent through a serverless endpoint and internal email notification without exposing API keys in the browser.",
     "form.name": "Name",
     "form.email": "Email",
     "form.role": "Company / role",
@@ -287,6 +290,9 @@ const translations = {
     "form.optionKnowledge": "Industrial knowledge",
     "form.message": "Message",
     "form.staticStatus": "The form is ready for future integration. No data has been sent.",
+    "form.sending": "Sending...",
+    "form.success": "Request received. Thank you.",
+    "form.error": "Submission failed. Please try again shortly.",
 
     "privacy.title": "Privacy",
     "privacy.lead": "This page briefly describes how Draphera handles data collected through the static site.",
@@ -359,9 +365,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.querySelector("[data-theme-toggle]");
   const themeIcon = document.querySelector("[data-theme-icon]");
   const form = document.querySelector("[data-static-form]");
+  const subscribeForms = document.querySelectorAll("[data-subscribe-form]");
   const formStatus = document.querySelector("[data-form-status]");
   const yearTargets = document.querySelectorAll("[data-year]");
   const supportedLanguages = ["it", "en"];
+
+  const trackLocalVisit = () => {
+    try {
+      const key = "draphera-local-visits";
+      const now = new Date().toISOString();
+      const current = JSON.parse(localStorage.getItem(key) || "{}");
+      const total = Number(current.total || 0) + 1;
+      const pages = current.pages || {};
+      const page = window.location.pathname || "/";
+      pages[page] = Number(pages[page] || 0) + 1;
+      const payload = {
+        total,
+        pages,
+        firstVisit: current.firstVisit || now,
+        lastVisit: now,
+      };
+      localStorage.setItem(key, JSON.stringify(payload));
+      window.drapheraLocalVisits = payload;
+    } catch {
+      window.drapheraLocalVisits = null;
+    }
+  };
+
+  trackLocalVisit();
 
   yearTargets.forEach((target) => {
     target.textContent = String(new Date().getFullYear());
@@ -493,4 +524,37 @@ document.addEventListener("DOMContentLoaded", () => {
       formStatus.textContent = translations[document.documentElement.lang]?.["form.staticStatus"] || translations.it["form.staticStatus"];
     });
   }
+
+  subscribeForms.forEach((subscribeForm) => {
+    const status = subscribeForm.querySelector("[data-form-status]");
+    const button = subscribeForm.querySelector("button[type='submit']");
+
+    subscribeForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const dictionary = translations[document.documentElement.lang] || translations.it;
+      if (status) status.textContent = dictionary["form.sending"];
+      if (button) button.disabled = true;
+
+      const data = Object.fromEntries(new FormData(subscribeForm).entries());
+      data.page = window.location.href;
+
+      try {
+        const response = await fetch(subscribeForm.action, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        const payload = await response.json().catch(() => ({}));
+        if (!response.ok || payload.ok === false) {
+          throw new Error(payload.message || "Request failed");
+        }
+        subscribeForm.reset();
+        if (status) status.textContent = payload.message || dictionary["form.success"];
+      } catch {
+        if (status) status.textContent = dictionary["form.error"];
+      } finally {
+        if (button) button.disabled = false;
+      }
+    });
+  });
 });

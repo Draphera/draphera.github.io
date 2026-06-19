@@ -39,8 +39,13 @@ permalink: /journal/
       <p class="eyebrow">Newsletter</p>
       <h2>Ricevi aggiornamenti dal Journal</h2>
       <p>Aggiornamenti su ricerca, interoperabilità, dati vettoriali e conoscenza tecnica.</p>
-      <!-- TODO: integrare newsletter futura con Resend / Buttondown / ConvertKit / backend custom. -->
     </div>
-    <div class="form-field"><label for="newsletter-email">Email</label><input id="newsletter-email" type="email" placeholder="email@example.com" disabled></div>
+    <form class="newsletter-form" action="/api/subscribe" method="post" data-subscribe-form>
+      <input type="hidden" name="source" value="newsletter">
+      <input class="honeypot-field" type="text" name="company_url" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="form-field"><label for="newsletter-email">Email</label><input id="newsletter-email" name="email" type="email" placeholder="email@example.com" autocomplete="email" required></div>
+      <button class="btn btn-primary" type="submit">Iscriviti</button>
+      <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>

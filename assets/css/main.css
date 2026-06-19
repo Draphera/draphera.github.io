@@ -1142,6 +1142,27 @@ body.light-mode .page-hero {
   gap: 0.4rem;
 }
 
+.honeypot-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.newsletter-form {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto;
+  gap: 0.85rem;
+  align-items: end;
+  width: min(100%, 560px);
+}
+
+.newsletter-form .form-status {
+  grid-column: 1 / -1;
+}
+
 .form-field.full {
   grid-column: 1 / -1;
 }
@@ -1451,6 +1472,11 @@ body.light-mode .footer-logo {
   .beta-panel {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .newsletter-form {
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .manifesto-document article {

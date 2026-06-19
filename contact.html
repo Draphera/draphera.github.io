@@ -80,8 +80,9 @@
 
     <section class="section">
       <div class="container contact-layout">
-        <form class="access-form" action="#" method="post" data-static-form>
-          <!-- Integrare qui Formspree, Netlify Forms o un backend futuro quando la raccolta contatti sarà attiva. -->
+        <form class="access-form" action="/api/subscribe" method="post" data-subscribe-form>
+          <input type="hidden" name="source" value="access">
+          <input class="honeypot-field" type="text" name="company_url" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-field"><label for="name" data-i18n="form.name">Nome</label><input id="name" name="name" type="text" autocomplete="name" required></div>
           <div class="form-field"><label for="email" data-i18n="form.email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
           <div class="form-field"><label for="role" data-i18n="form.role">Azienda / ruolo</label><input id="role" name="role" type="text" autocomplete="organization"></div>
@@ -92,8 +93,8 @@
         </form>
         <aside class="surface-card contact-aside">
           <p class="eyebrow">Info</p>
-          <h2 data-i18n="contact.asideTitle">Modulo statico</h2>
-          <p data-i18n="contact.asideText">Nessun dato viene inviato finché il form non sarà collegato a un servizio di raccolta o a un backend dedicato.</p>
+          <h2 data-i18n="contact.asideTitle">Invio protetto</h2>
+          <p data-i18n="contact.asideText">Le richieste vengono inviate tramite endpoint serverless e notifica email interna, senza esporre chiavi API nel browser.</p>
         </aside>
       </div>
     </section>
