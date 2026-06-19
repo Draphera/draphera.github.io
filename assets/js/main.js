@@ -143,9 +143,9 @@ const translations = {
     "privacy.dataTitle": "Dati raccolti",
     "privacy.dataText": "Il sito è statico. Il modulo di accesso non invia dati finché non sarà collegato a un servizio dedicato o a un backend futuro.",
     "privacy.cookiesTitle": "Cookie e tracciamento",
-    "privacy.cookiesText": "La versione attuale non include cookie di profilazione. Le preferenze di tema e lingua possono essere salvate localmente nel browser.",
-    "privacy.linksTitle": "Link esterni",
-    "privacy.linksText": "Il sito può collegare risorse esterne, inclusi VISION Observatory e canali social. Tali servizi hanno proprie informative e impostazioni privacy.",
+    "privacy.cookiesText": "Il sito utilizza Google Analytics e Meta Pixel per misurare visite, interazioni e performance delle campagne. Le preferenze di tema e lingua possono essere salvate localmente nel browser.",
+    "privacy.linksTitle": "Servizi esterni",
+    "privacy.linksText": "Il sito può caricare risorse da Google Tag Manager, Google Analytics e Meta/Facebook Pixel, oltre a collegare VISION Observatory e canali social. Tali servizi possono trattare dati secondo le rispettive informative.",
     "privacy.contactTitle": "Contatti",
     "privacy.contactText": "Per richieste relative a Draphera, usa il modulo di accesso quando sarà integrato o i canali ufficiali indicati nel footer."
   },
@@ -293,9 +293,9 @@ const translations = {
     "privacy.dataTitle": "Data collected",
     "privacy.dataText": "The site is static. The access form does not send data until it is connected to a dedicated service or future backend.",
     "privacy.cookiesTitle": "Cookies and tracking",
-    "privacy.cookiesText": "The current version does not include profiling cookies. Theme and language preferences may be stored locally in the browser.",
-    "privacy.linksTitle": "External links",
-    "privacy.linksText": "The site may link to external resources, including VISION Observatory and social channels. Those services have their own privacy notices and settings.",
+    "privacy.cookiesText": "The site uses Google Analytics and Meta Pixel to measure visits, interactions and campaign performance. Theme and language preferences may be stored locally in the browser.",
+    "privacy.linksTitle": "External services",
+    "privacy.linksText": "The site may load resources from Google Tag Manager, Google Analytics and Meta/Facebook Pixel, and may link to VISION Observatory and social channels. Those services may process data according to their own notices.",
     "privacy.contactTitle": "Contact",
     "privacy.contactText": "For Draphera requests, use the access form when integrated or the official channels listed in the footer."
   }

@@ -27,10 +27,37 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYPZ5YPGXQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QYPZ5YPGXQ');
+  </script>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '941668942230418');
+  fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
   <link rel="stylesheet" href="./assets/css/main.css">
   <script src="./assets/js/main.js" defer></script>
 </head>
 <body>
+  <!-- Meta Pixel Code -->
+  <noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=941668942230418&ev=PageView&noscript=1"></noscript>
+  <!-- End Meta Pixel Code -->
+
   <a class="skip-link" href="#main" data-i18n="common.skip">Salta al contenuto</a>
   <header class="site-header" data-header>
     <nav class="nav-shell" aria-label="Navigazione principale">
@@ -54,8 +81,8 @@
     <section class="section">
       <div class="container legal-document">
         <article><h2 data-i18n="privacy.dataTitle">Dati raccolti</h2><p data-i18n="privacy.dataText">Il sito è statico. Il modulo di accesso non invia dati finché non sarà collegato a un servizio dedicato o a un backend futuro.</p></article>
-        <article><h2 data-i18n="privacy.cookiesTitle">Cookie e tracciamento</h2><p data-i18n="privacy.cookiesText">La versione attuale non include cookie di profilazione. Le preferenze di tema e lingua possono essere salvate localmente nel browser.</p></article>
-        <article><h2 data-i18n="privacy.linksTitle">Link esterni</h2><p data-i18n="privacy.linksText">Il sito può collegare risorse esterne, inclusi VISION Observatory e canali social. Tali servizi hanno proprie informative e impostazioni privacy.</p></article>
+        <article><h2 data-i18n="privacy.cookiesTitle">Cookie e tracciamento</h2><p data-i18n="privacy.cookiesText">Il sito utilizza Google Analytics e Meta Pixel per misurare visite, interazioni e performance delle campagne. Le preferenze di tema e lingua possono essere salvate localmente nel browser.</p></article>
+        <article><h2 data-i18n="privacy.linksTitle">Servizi esterni</h2><p data-i18n="privacy.linksText">Il sito può caricare risorse da Google Tag Manager, Google Analytics e Meta/Facebook Pixel, oltre a collegare VISION Observatory e canali social. Tali servizi possono trattare dati secondo le rispettive informative.</p></article>
         <article><h2 data-i18n="privacy.contactTitle">Contatti</h2><p data-i18n="privacy.contactText">Per richieste relative a Draphera, usa il modulo di accesso quando sarà integrato o i canali ufficiali indicati nel footer.</p></article>
       </div>
     </section>
