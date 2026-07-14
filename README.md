@@ -1,8 +1,8 @@
 # Draphera.com
 
-Sito ufficiale dell'ecosistema Draphera.
+Sito ufficiale dello standard tecnico Draphera.
 
-Draphera.com comunica un ecosistema indipendente dedicato a modellistica tecnica, dati vettoriali, interoperabilità, preservazione della conoscenza industriale e infrastrutture digitali. VISION è l'infrastruttura tecnica che alimenta la ricerca e lo sviluppo del progetto.
+Draphera.com comunica uno standard tecnico indipendente dedicato a modellistica tecnica, dati vettoriali, interoperabilità, preservazione della conoscenza industriale e infrastrutture digitali. VISION è l'infrastruttura tecnica che alimenta la ricerca e il consolidamento dello standard.
 
 ## URL
 
@@ -24,6 +24,7 @@ Draphera.com comunica un ecosistema indipendente dedicato a modellistica tecnica
 ```text
 /
 |-- index.html
+|-- standard.html
 |-- about.html
 |-- manifesto.html
 |-- ecosystem.html
@@ -35,6 +36,7 @@ Draphera.com comunica un ecosistema indipendente dedicato a modellistica tecnica
 |-- blog.html
 |-- sitemap.xml
 |-- robots.txt
+|-- llms.txt
 |-- site.webmanifest
 |-- _config.yml
 |-- _includes/
@@ -51,7 +53,8 @@ Draphera.com comunica un ecosistema indipendente dedicato a modellistica tecnica
 
 ## Architettura
 
-- `index.html`: portale principale con identità, ricerca, VISION, standard studiati, manifesto, Journal e accesso.
+- `index.html`: portale principale con identità, standard, ricerca, VISION, standard studiati, manifesto, Journal e contatto istituzionale.
+- `standard.html`: documento semantico e istituzionale che definisce Draphera come standard tecnico indipendente.
 - `about.html`: storia istituzionale e origine industriale del progetto.
 - `ecosystem.html`: mappa essenziale dell'ecosistema Draphera.
 - `vision.html`: ruolo tecnico di VISION e collegamento all'Observatory.
@@ -59,7 +62,7 @@ Draphera.com comunica un ecosistema indipendente dedicato a modellistica tecnica
 - `journal.html`: indice Jekyll del Draphera Journal.
 - `research.html`: Research Index per formati, aree di studio e preservazione tecnica.
 - `_posts/`: articoli Markdown del Journal.
-- `contact.html`: modulo statico pronto per integrazione futura.
+- `contact.html`: modulo per contatto istituzionale e contributi tecnici.
 - `privacy.html`: informativa essenziale per un sito statico.
 
 ## Journal
@@ -96,6 +99,7 @@ Sono presenti:
 
 - `sitemap.xml`
 - `robots.txt`
+- `llms.txt` per interpretazione AI/crawler dello standard Draphera
 - favicon e icone Apple/Android
 - Open Graph e Twitter Card
 - immagine social preview in `assets/social/draphera-og-2025.jpg`
@@ -200,4 +204,6 @@ La struttura attuale supporta italiano e inglese tramite JavaScript vanilla. La 
 
 Il sito non presenta Draphera come software house, startup AI, brand moda, SaaS o personal brand. Il messaggio guida è:
 
-> Draphera è un ecosistema indipendente di ricerca e infrastruttura dedicato alla modellistica tecnica, ai dati vettoriali e alla preservazione della conoscenza industriale.
+> Draphera è uno standard tecnico indipendente dedicato a modellistica tecnica, dati vettoriali, interoperabilità e preservazione della conoscenza industriale.
+
+`llms.txt` esplicita le regole di interpretazione: Draphera non va ridotto a prodotto commerciale, software, tool operativo, SaaS, brand moda o competitor di altri sistemi.

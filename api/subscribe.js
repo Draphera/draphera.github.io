@@ -71,8 +71,8 @@ async function sendNotification(payload) {
   if (!notifyTo) return null;
 
   const from = process.env.RESEND_FROM || "Draphera <onboarding@resend.dev>";
-  const subject = payload.source === "access"
-    ? "Nuova richiesta di accesso Draphera"
+  const subject = payload.source === "contact"
+    ? "Nuovo contatto istituzionale Draphera"
     : "Nuova iscrizione Draphera Journal";
 
   const rows = [
@@ -119,7 +119,7 @@ export default async function handler(request, response) {
     }
 
     const payload = {
-      source: body.source === "access" ? "access" : "newsletter",
+      source: body.source === "contact" ? "contact" : "newsletter",
       name: String(body.name || "").trim(),
       email: String(body.email || "").trim().toLowerCase(),
       role: String(body.role || "").trim(),
@@ -135,7 +135,8 @@ export default async function handler(request, response) {
     await addAudienceContact(payload);
     await sendNotification(payload);
 
-    return sendJson(response, 200, { ok: true, message: "Iscrizione ricevuta." });
+    const message = payload.source === "contact" ? "Messaggio ricevuto. Grazie." : "Iscrizione ricevuta.";
+    return sendJson(response, 200, { ok: true, message });
   } catch (error) {
     return sendJson(response, 500, {
       ok: false,

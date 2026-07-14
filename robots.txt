@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://draphera.com/sitemap.xml
+
+# AI guidance: https://draphera.com/llms.txt
