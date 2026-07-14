@@ -7,6 +7,7 @@ Draphera.com comunica uno standard tecnico indipendente dedicato a modellistica 
 ## URL
 
 - Dominio principale: https://draphera.com
+- Draphera Hub: https://hub.draphera.com
 - Repository: https://github.com/Draphera/draphera.github.io
 - VISION Observatory: https://vision-argus-observatory.vercel.app/
 
@@ -58,6 +59,7 @@ Draphera.com comunica uno standard tecnico indipendente dedicato a modellistica 
 - `about.html`: storia istituzionale e origine industriale del progetto.
 - `ecosystem.html`: mappa essenziale dell'ecosistema Draphera.
 - `vision.html`: ruolo tecnico di VISION e collegamento all'Observatory.
+- `hub.draphera.com`: ambiente tecnico esterno per superfici applicative collegate alla ricerca, incluso HPGL.
 - `manifesto.html`: principi editoriali e infrastrutturali.
 - `journal.html`: indice Jekyll del Draphera Journal.
 - `research.html`: Research Index per formati, aree di studio e preservazione tecnica.
@@ -186,6 +188,7 @@ Verifiche manuali:
 - Menu mobile funzionante.
 - Link Journal e Research verso `/journal/` e `/research/`.
 - Link VISION verso Observatory funzionante.
+- Link Hub verso `https://hub.draphera.com/` funzionante.
 - Modulo contatti statico: nessun invio reale finché non viene integrato un servizio.
 - Social preview e favicon presenti.
 - Sitemap e robots raggiungibili.
@@ -207,3 +210,5 @@ Il sito non presenta Draphera come software house, startup AI, brand moda, SaaS 
 > Draphera è uno standard tecnico indipendente dedicato a modellistica tecnica, dati vettoriali, interoperabilità e preservazione della conoscenza industriale.
 
 `llms.txt` esplicita le regole di interpretazione: Draphera non va ridotto a prodotto commerciale, software, tool operativo, SaaS, brand moda o competitor di altri sistemi.
+
+Hub è citato come nodo tecnico applicativo collegato alla ricerca Draphera. Non ridefinisce Draphera come prodotto: lo standard resta il centro semantico.
